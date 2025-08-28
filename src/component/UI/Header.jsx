@@ -44,7 +44,7 @@ function Header() {
                   tabIndex="-1"
                   aria-disabled="true"
                 >
-                  Contact1
+                  Contact
                 </Link>
               </li>
             </ul>
