@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "countryName": "World",
+    "capital": "No Capital",
+    "population": "8.2421 billion",
+    "interestingFact": "Interesting Fact: There are 195 countries in the world today, including 193 United Nations member states and 2 observer states."
+  },{
+    "id": 2,
+    "countryName": "India",
+    "capital": "New Delhi",
+    "population": 1400000000,
+    "interestingFact": "India is the world's largest democracy and home to over 22 official languages."
+  },
+  {
+    "id": 3,
+    "countryName": "Japan",
+    "capital": "Tokyo",
+    "population": 125000000,
+    "interestingFact": "Tokyo is the most populous capital city in the world."
+  },
+  {
+    "id": 4,
+    "countryName": "Brazil",
+    "capital": "Brasília",
+    "population": 215000000,
+    "interestingFact": "Brazil is the only country in South America that speaks Portuguese."
+  },
+  {
+    "id": 5,
+    "countryName": "Germany",
+    "capital": "Berlin",
+    "population": 83000000,
+    "interestingFact": "Germany is Europe's largest economy and known for its engineering excellence."
+  },
+  {
+    "id": 6,
+    "countryName": "Australia",
+    "capital": "Canberra",
+    "population": 26000000,
+    "interestingFact": "Australia is home to more kangaroos than people."
+  },
+  {
+    "id": 7,
+    "countryName": "Canada",
+    "capital": "Ottawa",
+    "population": 39000000,
+    "interestingFact": "Canada has the longest coastline of any country in the world."
+  },
+  {
+    "id": 8,
+    "countryName": "Egypt",
+    "capital": "Cairo",
+    "population": 110000000,
+    "interestingFact": "Egypt is home to the Great Pyramid of Giza, the only remaining ancient wonder."
+  },
+  {
+    "id": 9,
+    "countryName": "France",
+    "capital": "Paris",
+    "population": 68000000,
+    "interestingFact": "France is the most visited country in the world."
+  },
+  {
+    "id": 10,
+    "countryName": "South Africa",
+    "capital": "Pretoria",
+    "population": 60000000,
+    "interestingFact": "South Africa has three capital cities: Pretoria, Cape Town, and Bloemfontein."
+  },
+  {
+    "id": 11,
+    "countryName": "Mexico",
+    "capital": "Mexico City",
+    "population": 126000000,
+    "interestingFact": "Mexico City was built on the ruins of the ancient Aztec capital, Tenochtitlán."
+  }
+]

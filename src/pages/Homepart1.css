@@ -1,0 +1,59 @@
+.Homecon1{
+  background-color: rgb(0, 0, 0);
+  min-height: 100vh;
+}
+
+.homecol1{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.homeh1{
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.homep1{
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.homebtn1{
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.homebtn1:hover {
+  background-color: white !important;
+  color: black !important;
+  transform: translateY(-2px);
+}
+
+img:hover {
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  transform: scale(1.05);
+}
+
+/* Additional styles for better responsiveness */
+@media (max-width: 768px) {
+  .homeh1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .homep1 {
+    text-align: center;
+  }
+  
+  .homebtn1 {
+    display: block;
+    margin: 0 auto 30px;
+  }
+}
+.homecol2img{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  
+}

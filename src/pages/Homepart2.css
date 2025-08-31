@@ -1,0 +1,18 @@
+.Homepart2col1{
+  margin-top: 40px;
+  margin-bottom: 50px
+}
+.Homepart2h1{
+  color: white;
+}
+.homepart2card{
+  height: 320px;
+  background: linear-gradient(135deg, #313131, #101010);;
+}
+.homepart2col2{
+  margin-bottom: 50px;
+  
+}
+.card-title{
+  margin-top: 30px;
+}

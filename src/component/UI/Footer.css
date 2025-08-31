@@ -1,0 +1,166 @@
+/* Footer.css */
+
+.footer-container {
+   background-color: rgb(30, 30, 30);
+  color: white;
+  border-top: 1px solid #3a3a3a;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-item {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.footer-item:hover {
+  background-color: rgba(74, 144, 226, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(74, 144, 226, 0.1);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-item:hover .footer-icon {
+  background-color: rgba(74, 144, 226, 0.2);
+  transform: scale(1.1);
+}
+
+.footer-icon svg {
+  transition: all 0.3s ease;
+}
+
+.footer-item:hover .footer-icon svg {
+  transform: scale(1.1);
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 4px;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  font-weight: 400;
+  margin-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+.footer-item:hover .footer-text {
+  color: #4A90E2;
+}
+
+.footer-content {
+  min-width: 0;
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+  }
+  
+  .footer-item {
+    justify-content: center !important;
+    margin-bottom: 20px;
+  }
+  
+  .footer-title {
+    font-size: 1rem;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+  }
+  
+  .footer-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-icon {
+    margin-bottom: 10px;
+    margin-right: 0 !important;
+  }
+  
+  .footer-title {
+    font-size: 0.95rem;
+  }
+  
+  .footer-text {
+    font-size: 0.85rem;
+  }
+}
+
+/* Dark theme variations */
+.footer-container.dark-theme {
+  background-color: #1a1a1a;
+  border-top-color: #2a2a2a;
+}
+
+/* Sticky footer option */
+.footer-container.sticky-footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+}
+
+/* Animation for icons */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+  }
+}
+
+.footer-icon:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* Additional hover effects for the entire footer item */
+.footer-item {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.footer-item:hover::before {
+  left: 100%;
+}

@@ -1,9 +1,16 @@
-function Home(){
-  return(
+import "./Home.css";
+import Homepart1 from "./Homepart1";
+import Homepart2 from "./Homepart2";
+
+function Home() {
+  return (
     <>
-    <h1>home</h1>
+      <div className="container-fluid Homecon1">
+        <Homepart1 />
+        <Homepart2 />
+      </div>
     </>
-  )
+  );
 }
 
 export default Home;
