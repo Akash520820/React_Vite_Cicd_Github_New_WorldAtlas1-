@@ -1,7 +1,18 @@
 import "./Header.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <>
       <nav className="navbar navbar-expand-lg WorldAtlasNavbar">
@@ -12,28 +23,43 @@ function Header() {
           <button
             className="navbar-toggler WorldAtlasNavbartoggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
+            onClick={toggleNav}
             aria-controls="navbarNav"
-            aria-expanded="false"
+            aria-expanded={isNavOpen}
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <div 
+            className={`navbar-collapse justify-content-end ${isNavOpen ? 'show' : ''}`} 
+            id="navbarNav"
+          >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link 
+                  className="nav-link active" 
+                  aria-current="page" 
+                  to="/"
+                  onClick={closeNav}
+                >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/about">
+                <Link 
+                  className="nav-link active" 
+                  to="/about"
+                  onClick={closeNav}
+                >
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" to="/country">
+                <Link 
+                  className="nav-link active" 
+                  to="/country"
+                  onClick={closeNav}
+                >
                   Country
                 </Link>
               </li>
@@ -41,6 +67,7 @@ function Header() {
                 <Link
                   className="nav-link active"
                   to="/contact"
+                  onClick={closeNav}
                   tabIndex="-1"
                   aria-disabled="true"
                 >

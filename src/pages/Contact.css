@@ -1,0 +1,83 @@
+.ContactConf {
+  background-color: black;
+  min-height: 90vh;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.contact-form-wrapper {
+  padding: 40px 20px;
+}
+
+.contact-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-input {
+  background-color: transparent !important;
+  border: 1px solid #6c757d !important;
+  border-radius: 5px !important;
+  color: white !important;
+  padding: 12px 16px !important;
+  font-size: 1rem;
+}
+
+.contact-input::placeholder {
+  color: #adb5bd !important;
+}
+
+.contact-input:focus {
+  background-color: transparent !important;
+  border-color: #adb5bd !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+
+.contact-textarea {
+  resize: none !important;
+  min-height: 150px !important;
+}
+
+.contact-btn {
+  background-color: transparent !important;
+  border: 1px solid #6c757d !important;
+  color: white !important;
+  padding: 12px 16px !important;
+  border-radius: 5px !important;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #343a40 !important;
+  border-color: #adb5bd !important;
+  color: white !important;
+}
+
+.contact-btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.5) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .ContactConf {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 20px 10px;
+  }
+  
+  .contact-title {
+    font-size: 1.75rem;
+  }
+}

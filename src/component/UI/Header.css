@@ -18,18 +18,71 @@
   color: #ddd !important;
 }
 
-/* Custom white toggler icon */
-.WorldAtlasNavbartoggler .navbar-toggler-icon {
+/* Custom white toggler icon - Fixed class name */
+.WorldAtlasNavbar .navbar-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 /* Optional: white border around the button */
-.WorldAtlasNavbartoggler.navbar-toggler {
+.WorldAtlasNavbar .navbar-toggler {
   border-color: white;
 }
+
 /* Custom white shadow for toggler button */
-.WorldAtlasNavbartoggler.navbar-toggler:focus {
+.WorldAtlasNavbar .navbar-toggler:focus {
   outline: none;
   box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.6);
 }
 
+/* Desktop navbar collapse - Always visible */
+.WorldAtlasNavbar .navbar-collapse {
+  max-height: none;
+  opacity: 1;
+  overflow: visible;
+}
+
+/* Mobile toggle menu styling */
+@media (max-width: 991.98px) {
+  .WorldAtlasNavbar {
+    height: auto;
+  }
+  
+  /* Mobile-specific navbar collapse styling */
+  .WorldAtlasNavbar .navbar-collapse {
+    background-color: rgb(30, 30, 30);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* Apply transition to both open and close states */
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  
+  .WorldAtlasNavbar .navbar-collapse.show {
+    max-height: 400px;
+    opacity: 1;
+  }
+  
+  /* Apply transition to nav items for both states */
+  .WorldAtlasNavbar .navbar-nav .nav-item {
+    text-align: left;
+    margin-bottom: 10px;
+    transform: translateY(-10px);
+    opacity: 0;
+    /* Transition for closing animation */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .WorldAtlasNavbar .navbar-collapse.show .navbar-nav .nav-item {
+    transform: translateY(0);
+    opacity: 1;
+    /* Delay only for opening animation */
+    transition: transform 0.3s ease-in-out 0.1s, opacity 0.3s ease-in-out 0.1s;
+  }
+  
+  .WorldAtlasNavbar .navbar-nav {
+    text-align: left;
+  }
+}

@@ -16,7 +16,7 @@ const Footer = () => {
               </div>
               <div className="footer-content">
                 <h6 className="footer-title mb-1">Find us</h6>
-                <p className="footer-text mb-0">Pune, Maharashtra</p>
+                <p className="footer-text mb-0">Tripura, Agartala</p>
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ const Footer = () => {
               </div>
               <div className="footer-content">
                 <h6 className="footer-title mb-1">Call us</h6>
-                <p className="footer-text mb-0">9876543211</p>
+                <p className="footer-text mb-0">9362944131</p>
               </div>
             </div>
           </div>
@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
               <div className="footer-content">
                 <h6 className="footer-title mb-1">Mail us</h6>
-                <p className="footer-text mb-0">contact@kodyher.com</p>
+                <p className="footer-text mb-0">chakrabortyakash731@gmail.com</p>
               </div>
             </div>
           </div>

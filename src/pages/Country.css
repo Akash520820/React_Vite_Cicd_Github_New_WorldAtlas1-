@@ -1,0 +1,108 @@
+.Countrymaincon {
+  background: black;
+  min-height: 100vh;
+  padding: 0;
+}
+
+.country-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #313131, #101010);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(255, 255, 255, 0.1) !important;
+}
+
+.country-card .card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.country-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.country-card .card-body {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #313131, #101010);
+  color: #ffffff;
+}
+
+.country-card .card-title {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #555555;
+  padding-bottom: 0.5rem;
+}
+
+.country-card .card-text p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #e0e0e0;
+}
+
+.country-card .card-text strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.country-card .btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.country-card .btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3, #003d82);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Dark theme for main heading */
+.Countrymaincon h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+}
+
+/* Dark theme for alert */
+.Countrymaincon .alert-info {
+  background: linear-gradient(135deg, #313131, #101010);
+  border: 1px solid #555555;
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .country-card .card-body {
+    padding: 1rem;
+  }
+  
+  .country-card .card-text p {
+    font-size: 0.85rem;
+  }
+  
+  .country-card .card-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Loading state improvements - Dark theme */
+.d-flex.justify-content-center.align-items-center {
+  background: linear-gradient(135deg, #313131, #101010);
+  border-radius: 12px;
+  margin: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
