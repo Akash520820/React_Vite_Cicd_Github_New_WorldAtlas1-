@@ -1,7 +1,7 @@
 /* Footer.css */
 
 .footer-container {
-   background-color: rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30);
   color: white;
   border-top: 1px solid #3a3a3a;
   position: relative;
@@ -29,6 +29,7 @@
   border-radius: 50%;
   flex-shrink: 0;
   transition: all 0.3s ease;
+  
 }
 
 .footer-item:hover .footer-icon {
@@ -68,48 +69,132 @@
   flex: 1;
 }
 
-/* Responsive Design */
+/* Mobile-First Responsive Design */
 @media (max-width: 768px) {
   .footer-container {
-    text-align: center;
+    padding: 1rem 0;
   }
   
+  /* Stack items vertically on mobile with compact design */
   .footer-item {
-    justify-content: center !important;
-    margin-bottom: 20px;
+    background: linear-gradient(145deg, #2a2a2a, #1e1e1e);
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
   
-  .footer-title {
-    font-size: 1rem;
+  .footer-item:last-child {
+    margin-bottom: 0;
   }
   
-  .footer-text {
-    font-size: 0.9rem;
+  .footer-item:hover {
+    background: linear-gradient(145deg, #3a3a3a, #2e2e2e);
+    border-color: #4A90E2;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+  }
+  
+  /* Horizontal layout for mobile items */
+  .footer-item .d-flex {
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left;
   }
   
   .footer-icon {
     width: 45px;
     height: 45px;
-  }
-}
-
-@media (max-width: 576px) {
-  .footer-item {
-    flex-direction: column;
-    text-align: center;
+    margin-right: 1rem !important;
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
   }
   
-  .footer-icon {
-    margin-bottom: 10px;
-    margin-right: 0 !important;
+  .footer-icon svg {
+    fill: white !important;
+  }
+  
+  .footer-icon svg path {
+    fill: white !important;
   }
   
   .footer-title {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
   
   .footer-text {
     font-size: 0.85rem;
+    color: #d0d0d0;
+    font-weight: 500;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    padding: 0.75rem 0;
+  }
+  
+  .footer-item {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+  }
+  
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 0.75rem !important;
+  }
+  
+  .footer-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-title {
+    font-size: 0.9rem;
+  }
+  
+  .footer-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra compact for very small screens */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0.5rem 0;
+  }
+  
+  .footer-item {
+    padding: 0.6rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .footer-icon {
+    width: 36px;
+    height: 36px;
+    margin-right: 0.6rem !important;
+  }
+  
+  .footer-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .footer-title {
+    font-size: 0.85rem;
+  }
+  
+  .footer-text {
+    font-size: 0.75rem;
+    line-height: 1.3;
   }
 }
 
@@ -126,41 +211,81 @@
   z-index: 100;
 }
 
-/* Animation for icons */
-@keyframes pulse {
+/* Enhanced animations for mobile */
+@keyframes mobileSlideIn {
   0% {
-    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+    opacity: 0;
+    transform: translateX(-20px);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-.footer-icon:hover {
-  animation: pulse 1.5s infinite;
+@media (max-width: 768px) {
+  .footer-item {
+    animation: mobileSlideIn 0.6s ease-out;
+  }
+  
+  .footer-item:nth-child(1) { animation-delay: 0.1s; }
+  .footer-item:nth-child(2) { animation-delay: 0.2s; }
+  .footer-item:nth-child(3) { animation-delay: 0.3s; }
 }
 
-/* Additional hover effects for the entire footer item */
-.footer-item {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
+/* Remove desktop-specific animations on mobile */
+@media (max-width: 768px) {
+  .footer-item::before {
+    display: none;
+  }
+  
+  .footer-icon:hover {
+    animation: none;
+  }
+  
+  .footer-item:hover .footer-icon {
+    transform: scale(1.05);
+  }
 }
 
-.footer-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.1), transparent);
-  transition: left 0.5s;
-}
+/* Desktop styles (unchanged for larger screens) */
+@media (min-width: 769px) {
+  /* Animation for icons */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+    }
+  }
 
-.footer-item:hover::before {
-  left: 100%;
+  .footer-icon:hover {
+    animation: pulse 1.5s infinite;
+  }
+
+  /* Additional hover effects for the entire footer item */
+  .footer-item {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  .footer-item:hover::before {
+    left: 100%;
+  }
 }
