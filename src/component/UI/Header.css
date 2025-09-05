@@ -44,14 +44,26 @@
 /* Mobile toggle menu styling */
 @media (max-width: 991.98px) {
   .WorldAtlasNavbar {
-    height: auto;
+    height: 55px; /* Reduced from 75px to 55px for mobile */
+    padding-top: 8px; /* Reduce top padding */
+    padding-bottom: 8px; /* Reduce bottom padding */
+  }
+  
+  /* Adjust brand and toggler size for mobile */
+  .WorldAtlasNavbar .navbar-brand {
+    font-size: 1.1rem; /* Slightly smaller brand text */
+  }
+  
+  .WorldAtlasNavbar .navbar-toggler {
+    padding: 0.2rem 0.4rem; /* Smaller toggler button */
+    font-size: 1rem; /* Smaller icon */
   }
   
   /* Mobile-specific navbar collapse styling */
   .WorldAtlasNavbar .navbar-collapse {
     background-color: rgb(30, 30, 30);
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px; /* Reduced from 15px */
+    padding-bottom: 10px; /* Reduced from 15px */
     /* Apply transition to both open and close states */
     transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
                 opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -61,14 +73,14 @@
   }
   
   .WorldAtlasNavbar .navbar-collapse.show {
-    max-height: 400px;
+    max-height: 300px; /* Reduced from 400px */
     opacity: 1;
   }
   
   /* Apply transition to nav items for both states */
   .WorldAtlasNavbar .navbar-nav .nav-item {
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Reduced from 10px */
     transform: translateY(-10px);
     opacity: 0;
     /* Transition for closing animation */
@@ -84,5 +96,42 @@
   
   .WorldAtlasNavbar .navbar-nav {
     text-align: left;
+  }
+  
+  /* Make nav links slightly smaller on mobile */
+  .WorldAtlasNavbar .nav-link {
+    font-size: 0.95rem;
+    padding: 0.4rem 0; /* Reduce link padding */
+  }
+}
+
+/* Extra small screens - even more compact */
+@media (max-width: 576px) {
+  .WorldAtlasNavbar {
+    height: 50px; /* Even smaller for extra small screens */
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  
+  .WorldAtlasNavbar .navbar-brand {
+    font-size: 1rem; /* Smaller brand text for xs screens */
+  }
+  
+  .WorldAtlasNavbar .navbar-toggler {
+    padding: 0.15rem 0.3rem; /* Even smaller toggler */
+  }
+  
+  .WorldAtlasNavbar .navbar-collapse {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  
+  .WorldAtlasNavbar .navbar-nav .nav-item {
+    margin-bottom: 6px;
+  }
+  
+  .WorldAtlasNavbar .nav-link {
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
   }
 }

@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Country from "./pages/Country";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
+import CountryDetails from "./pages/CountryDetails"; // Missing import added
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "country",
         element: <Country />,
+      },
+      {
+        path: "country/:id", // Changed from :details to :id for consistency
+        element: <CountryDetails />,
       },
       {
         path: "contact",

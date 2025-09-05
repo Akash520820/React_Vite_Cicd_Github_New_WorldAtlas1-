@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 
+
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -69,13 +70,10 @@ function Contact() {
                 </div>
                 
                 <div className="d-grid">
-                  <button
-                    type="button"
-                    onClick={handleSubmit}
-                    className="btn contact-btn"
-                  >
+                    <button
+                    type="button" onClick={handleSubmit} className="btn contact-btn">
                     Send
-                  </button>
+                    </button>
                 </div>
               </div>
             </div>
